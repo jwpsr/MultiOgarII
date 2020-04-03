@@ -1,5 +1,6 @@
 // Library imports
 var http = require('http');
+var express = require('express');
 
 // Project imports
 var Entity = require('./entity');
@@ -17,6 +18,7 @@ class Server {
         this.run = true;
         this.version = '1.6.2';
         this.httpServer = null;
+        this.app = null;
         this.lastNodeId = 1;
         this.lastPlayerId = 1;
         this.clients = [];
@@ -67,7 +69,8 @@ class Server {
         var bind = this.config.clientBind + "";
         this.clientBind = bind.split(' - ');
         // Start the server
-        this.httpServer = http.createServer();
+        this.app = express();
+        this.httpServer = http.createServer(app);
         var wsOptions = {
             server: this.httpServer,
             perMessageDeflate: false,
