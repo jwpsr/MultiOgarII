@@ -70,7 +70,7 @@ class Server {
         this.clientBind = bind.split(' - ');
         // Start the server
         this.app = express();
-        this.httpServer = http.createServer(app);
+        this.httpServer = http.createServer(this.app);
         var wsOptions = {
             server: this.httpServer,
             perMessageDeflate: false,
