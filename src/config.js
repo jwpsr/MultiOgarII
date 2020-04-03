@@ -68,8 +68,8 @@ module.exports = Object.seal({
 "serverChat": 1,
 "serverChatAscii": 1,
 "separateChatForTeams": 0,
-"serverName": "MultiOgarII #1",
-"serverWelcome1": "Welcome to MultiOgarII!",
+"serverName": "CGI Agar",
+"serverWelcome1": "Welcome to CGI's Agar Awesome Server!",
 "serverWelcome2": "",
 "clientBind": "",
 
